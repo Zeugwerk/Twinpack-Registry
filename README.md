@@ -38,6 +38,7 @@ At the moment PR are processed by somebody of our team. We will check if
 your repositories releases qualify to be put on the list, we will check that
 - Your repository has at least 1 release,
 - your release(s) are published having a .library file in their assets,
+- your repository contains a `LICENSE` (or `LICENSE.txt`) file, since this will be automatically linked with the package,
 - the .library files contains the meta information Twinpack requires, the bare minimum is "Library Name", "Company Name" (Distributor name) and "Version".
 - If we see an icon in your repository that makes sense to use, we'll ask you for permission to link it with the package
 
@@ -59,16 +60,16 @@ you submitted the pull request from in your fork of the `Zeugwerk/Twinpack-Regis
    or [tag](https://git-scm.com/docs/git-tag) and include your library in the assets of the release. Alternatively, you can redo the existing release/tag if you prefer.
 1. Comment on your pull request here in the `Twinpack/Twinpack-Registry` repository
 
-## Changing the URL of a library already in Library Manager
+## Changing the URL of a library already in Twinpack-Registry
 
 Submit a pull request that changes the URL as desired in [repositories.txt](repositories.txt). This can be done by
 following [the instructions above](#instructions).
 
-## Removing a library from Library Manager
+## Removing a library from Twinpack-Registry
 
 Submit a pull request that removes the URL from [repositories.txt](repositories.txt). This can be done by following
 [the instructions above](#instructions).
 
-## Report a problem with Library Manager
+## Report a problem with Twinpack-Registry
 
 Please submit an issue report [here](https://github.com/Zeugwerk/Twinpack-Registry/issues/new)
