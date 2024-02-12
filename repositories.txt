@@ -4,3 +4,4 @@ https://github.com/stefanbesler/struckig
 https://github.com/bengeisler/TcLog
 https://github.com/TcUnit/TcUnit
 https://github.com/TcHaxx/rplc
+https://github.com/Roald87/TcError/
