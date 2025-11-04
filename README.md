@@ -2,6 +2,33 @@
 
 This repository contains a [list](https://github.com/Zeugwerk/Twinpack-Registry/blob/main/repositories.txt) of GitHub repositories that are automatically published to the [Twinpack Package Manager](https://github.com/Zeugwerk/Twinpack) via a GitHub [workflow](https://github.com/Zeugwerk/Twinpack/blob/main/.github/workflows/pull.yml).
 
+```mermaid
+sequenceDiagram
+    participant Dev as Open Source Developer
+    participant Repo as Project Repository (GitHub)
+    participant Registry as Twinpack Registry
+    participant Twinpack as Twinpack Package Manager
+
+    Dev->>Registry: 📝 Create Pull Request<br/>to register project (metadata, repo URL)
+    Registry-->>Dev: ✅ PR merged<br/>Project is now registered
+
+    Note over Registry: Registry periodically polls<br/>each registered repository
+
+    loop Every day
+        Registry->>Repo: 🔍 Check for new release tags
+        Repo-->>Registry: 🏷️ Latest release info
+        alt New release found
+            Registry->>Twinpack: ⚙️ Trigger deployment
+            Twinpack-->>Registry: 📦 Package published
+        else No new release
+            Registry-->>Registry: ⏳ Wait until next poll
+        end
+    end
+
+    Dev->>Twinpack: 🔍 Install or update package<br/>via Twinpack Package Manager
+
+```
+
 ## Adding a package
 
 If you would like to make a TwinCAT library available for installation via [Twinpack](https://github.com/Zeugwerk/Twinpack), please submit a 
