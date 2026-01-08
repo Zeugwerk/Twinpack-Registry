@@ -9,3 +9,4 @@ https://github.com/rruiter87/TcControl
 https://github.com/fisothemes/TwinCat-Dynamic-Collections
 https://github.com/Zeugwerk/Testbench
 https://github.com/stefanbesler/Pushover-Twincat
+https://github.com/mihaiginta/TcOscatBasic
